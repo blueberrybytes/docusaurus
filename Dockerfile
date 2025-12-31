@@ -44,4 +44,4 @@ FROM caddy:2-alpine AS caddy
 ## Copy the Caddyfile.
 COPY --from=prod /opt/docusaurus/Caddyfile /etc/caddy/Caddyfile
 ## Copy the Docusaurus build output.
-COPY --from=prod /opt/docusaurus/build /var/docusaurus
+COPY --from=prod /opt/docusaurus/website/build /var/docusaurus
