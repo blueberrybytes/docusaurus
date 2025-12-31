@@ -6,62 +6,60 @@
  */
 
 @import url('react-medium-image-zoom/dist/styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600&family=Space+Grotesk:wght@500;600&display=swap');
 
 :root {
-  /*
-  See css var + hsl color palette technique:
-  https://blog.maximeheckel.com/posts/the-power-of-composition-with-css-variables/
-   */
-  --site-primary-hue-saturation: 167 68%;
-  --site-primary-hue-saturation-light: 167 56%; /* do we really need this extra one? */
-  --site-color-feedback-background: #f0f8ff;
-  --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
-  /* Use a darker color to ensure contrast, ideally we don't need important */
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
+  --bb-primary-main: #4361ee;
+  --bb-primary-light: #6b87ff;
+  --bb-primary-dark: #2d4cdd;
+  --bb-secondary-main: #ff6b6b;
+  --bb-secondary-dark: #e54b4b;
+  --bb-bg-default: #f8fafc;
+  --bb-bg-surface: #fff;
+  --bb-text-primary: #1e293b;
+  --bb-text-secondary: #64748b;
+  --bb-neutral-100: #f1f5f9;
+  --bb-neutral-200: #e2e8f0;
+  --bb-neutral-400: #94a3b8;
+  --bb-success: #10b981;
+  --bb-info: #3b82f6;
+  --bb-warning: #f59e0b;
+  --bb-error: #ef4444;
+  --ifm-font-family-base: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system,
+    blinkmacsystemfont, 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', 'Inter', 'Plus Jakarta Sans',
+    system-ui, sans-serif;
+  --ifm-font-weight-semibold: 600;
+  --ifm-color-primary: var(--bb-primary-main);
+  --ifm-color-primary-dark: var(--bb-primary-dark);
+  --ifm-color-primary-darker: #223db7;
+  --ifm-color-primary-darkest: #1c2f8c;
+  --ifm-color-primary-light: var(--bb-primary-light);
+  --ifm-color-primary-lighter: #8fa5ff;
+  --ifm-color-primary-lightest: #cfd5ff;
+  --ifm-background-color: var(--bb-bg-default);
+  --ifm-background-surface-color: var(--bb-bg-surface);
+  --ifm-color-content: var(--bb-text-primary);
+  --ifm-color-content-secondary: var(--bb-text-secondary);
+  --ifm-menu-color-active: var(--bb-primary-dark);
+  --ifm-breadcrumb-color-active: var(--bb-primary-dark);
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgb(67 97 238 / 12%);
 }
 
 html[data-theme='dark'] {
-  --site-color-feedback-background: #2a2929;
-  --docusaurus-highlighted-code-line-bg: rgb(66 66 66 / 35%);
-}
-
-/*
- * This selector will be dynamically replaced by the color generator. Don't put
- * other properties here.
- */
-[data-theme='light'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 30%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 26%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 23%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 17%);
-
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 39%);
-  --ifm-color-primary-lighter: hsl(
-    var(--site-primary-hue-saturation-light) 47%
-  );
-  --ifm-color-primary-lightest: hsl(
-    var(--site-primary-hue-saturation-light) 58%
-  );
-}
-
-/*
- * This selector will be dynamically replaced by the color generator. Don't put
- * other properties here.
- */
-[data-theme='dark'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 45%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 41%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 38%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 32%);
-
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 54%);
-  --ifm-color-primary-lighter: hsl(
-    var(--site-primary-hue-saturation-light) 62%
-  );
-  --ifm-color-primary-lightest: hsl(
-    var(--site-primary-hue-saturation-light) 73%
-  );
+  --ifm-color-primary: #8fa8ff;
+  --ifm-color-primary-dark: #6f86ff;
+  --ifm-color-primary-darker: #5a6fdc;
+  --ifm-color-primary-darkest: #4453a7;
+  --ifm-color-primary-light: #b7c4ff;
+  --ifm-color-primary-lighter: #d5dbff;
+  --ifm-color-primary-lightest: #eef0ff;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e2438;
+  --ifm-color-content: #f8fafc;
+  --ifm-color-content-secondary: #cdd5f4;
+  --docusaurus-highlighted-code-line-bg: rgb(99 126 255 / 25%);
 }
 
 .header-github-link::before {
@@ -96,11 +94,11 @@ html[data-theme='dark'] {
 }
 
 [data-theme='light'] .themedDocusaurus [fill='#FFFF50'] {
-  fill: greenyellow;
+  fill: #ff6b6b;
 }
 
 [data-theme='dark'] .themedDocusaurus [fill='#FFFF50'] {
-  fill: seagreen;
+  fill: #ff9e9e;
 }
 
 [data-theme='light'] .DocSearch {
@@ -150,27 +148,15 @@ html[data-theme='dark'] {
 }
 
 .theme-announcement-bar {
-  font-size: 20px;
-
-  /*
-  --site-announcement-bar-stripe-color1: hsl(
-    var(--site-primary-hue-saturation) 85%
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bb-text-primary);
+  background: linear-gradient(
+    120deg,
+    rgba(67 97 238 / 12%),
+    rgba(255 107 107 / 18%),
+    rgba(59 130 246 / 15%)
   );
-  --site-announcement-bar-stripe-color2: hsl(
-    var(--site-primary-hue-saturation) 95%
-  );
-   */
-  --site-announcement-bar-stripe-color1: #e8d7ff;
-  --site-announcement-bar-stripe-color2: #ffe9d1;
-
-  background: repeating-linear-gradient(
-    35deg,
-    var(--site-announcement-bar-stripe-color1),
-    var(--site-announcement-bar-stripe-color1) 20px,
-    var(--site-announcement-bar-stripe-color2) 10px,
-    var(--site-announcement-bar-stripe-color2) 40px
-  );
-  font-weight: bold;
 }
 
 .screen-reader-only {

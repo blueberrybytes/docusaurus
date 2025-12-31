@@ -694,13 +694,13 @@ export default async function createConfigAsync() {
       },
       navbar: {
         hideOnScroll: true,
-        title: 'Docusaurus',
+        title: 'Home',
         logo: {
-          alt: '',
-          src: 'img/docusaurus.svg',
-          srcDark: 'img/docusaurus_keytar.svg',
-          width: 32,
-          height: 32,
+          alt: 'Blueberry Docs',
+          src: 'img/product-logo-light.svg',
+          srcDark: 'img/product-logo-dark.svg',
+          width: 160,
+          height: 36,
         },
         items: [
           {
