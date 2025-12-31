@@ -5,6 +5,8 @@
 FROM node:lts AS base
 ## Disable colour output from yarn to make logs easier to read.
 ENV FORCE_COLOR=0
+## Disable Git-powered metadata lookup (fails inside clean Docker contexts).
+ENV DOCUSAURUS_SITE_VCS=disabled
 ## Enable corepack.
 RUN corepack enable
 ## Set the working directory to `/opt/docusaurus`.
