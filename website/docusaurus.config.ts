@@ -696,7 +696,7 @@ export default async function createConfigAsync() {
         hideOnScroll: true,
         title: 'Home',
         logo: {
-          alt: 'Blueberry Docs',
+          alt: 'OrbitBerry Docs',
           src: 'img/product-logo-light.svg',
           srcDark: 'img/product-logo-dark.svg',
           width: 160,
